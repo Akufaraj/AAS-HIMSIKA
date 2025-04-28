@@ -31,43 +31,47 @@
             /* Background tetap saat scroll */
         }
 
-        
+
         .navbar {
             padding: 1rem 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        padding: 15px 0;
-        background: rgba(255, 255, 255, 0.97);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         .main-content {
-        margin-top: 30px; /* Jarak tambahan antara navbar dan konten */
-        padding: 0 15px;
-    }
-    @media (max-width: 768px) {
-        body {
-            padding-top: 60px;
+            margin-top: 30px;
+            /* Jarak tambahan antara navbar dan konten */
+            padding: 0 15px;
         }
-        
-        .navbar {
-            padding: 10px 0;
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .main-content {
+                margin-top: 20px;
+            }
         }
-        
-        .main-content {
+
+        /* Pastikan semua card memiliki margin atas */
+        .card {
             margin-top: 20px;
         }
-    }
 
-    /* Pastikan semua card memiliki margin atas */
-    .card {
-        margin-top: 20px;
-    }
         .nav-logo {
             height: 40px;
             transition: all 0.3s ease;
@@ -110,39 +114,42 @@
         .dropdown-item {
             transition: all 0.2s ease;
         }
+
         @media (max-width: 991px) {
-        .navbar-collapse {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            .navbar-collapse {
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                padding: 1rem;
+                margin-top: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
         }
 
-        .nav-item {
-            margin: 0.5rem 0;
-        }
-
-        .navbar-toggler {
-            border: none;
-            padding: 0.5rem;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-    }
         /* Scroll Effect */
         .navbar-scrolled {
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        padding: 0.5rem 0;
-    }
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+        }
 
-    .navbar-scrolled .nav-logo {
-        height: 35px;
-    }
+        .navbar-scrolled .nav-logo {
+            height: 35px;
+        }
+
         .grid-container {
             margin-top: 40px;
             padding: 0 20px;
@@ -167,86 +174,92 @@
             transform: translateY(-2px);
             color: var(--accent-color) !important;
         }
+
         .logo-text {
-        line-height: 1.2;
-        margin-left: 10px;
-    }
-    .kategori-card {
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.kategori-card .icon {
-    font-size: 50px;
-    margin-bottom: 25px;
-    transition: all 0.3s ease;
-}
-
-.kategori-card .card-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.kategori-card .card-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: center;
-    color: #555;
-    max-width: 280px;
-}
-
-.kategori-card:hover {
-    transform: translateY(-15px) scale(1.03);
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.kategori-card:hover .icon {
-    color: #1e7e34;
-    transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-    .kategori-card {
-        min-height: 260px;
-        padding: 20px;
-    }
-    
-    .kategori-card .card-title {
-        font-size: 1.5rem;
-    }
-    
-    .kategori-card .card-text {
-        font-size: 0.95rem; 
-    }
-}
-    .navbar-brand h4 {
-        color: var(--primary-color);
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-    
-    .navbar-brand:hover h4 {
-        color: var(--accent-color);
-    }
-    
-    @media (max-width: 768px) {
-        .logo-text {
-            margin-left: 8px;
+            line-height: 1.2;
+            margin-left: 10px;
         }
+
+        .kategori-card {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .kategori-card .icon {
+            font-size: 50px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .kategori-card .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .kategori-card .card-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+            color: #555;
+            max-width: 280px;
+        }
+
+        .kategori-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .kategori-card:hover .icon {
+            color: #1e7e34;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .kategori-card {
+                min-height: 260px;
+                padding: 20px;
+            }
+
+            .kategori-card .card-title {
+                font-size: 1.5rem;
+            }
+
+            .kategori-card .card-text {
+                font-size: 0.95rem;
+            }
+        }
+
         .navbar-brand h4 {
-            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-        .navbar-brand p {
-            font-size: 0.7rem;
+
+        .navbar-brand:hover h4 {
+            color: var(--accent-color);
         }
-    }
+
+        @media (max-width: 768px) {
+            .logo-text {
+                margin-left: 8px;
+            }
+
+            .navbar-brand h4 {
+                font-size: 1.1rem;
+            }
+
+            .navbar-brand p {
+                font-size: 0.7rem;
+            }
+        }
+
         /* Header Styles */
         header {
             position: fixed;
@@ -524,7 +537,6 @@
                 transform: translateY(-10px);
             }
         }
-        
     </style>
 </head>
 
@@ -580,30 +592,97 @@
                 <div class="card kategori-card">
                     <i class="bi bi-trophy icon"></i>
                     <h3 class="card-title">Lomba</h3>
-                    <p class="card-text">Temukan berbagai kompetisi akademik dan non-akademik untuk mengasah kemampuan dan meraih prestasi</p>
+                    <p class="card-text">Temukan berbagai kompetisi akademik dan non-akademik untuk mengasah kemampuan
+                        dan meraih prestasi</p>
                 </div>
                 <div class="card kategori-card">
                     <i class="bi bi-mortarboard icon"></i>
                     <h3 class="card-title">Beasiswa</h3>
-                    <p class="card-text">course untuk mahasiswa berprestasi maupun yang membutuhkan bantuan pencapaian Prestasi</p>
+                    <p class="card-text">course untuk mahasiswa berprestasi maupun yang membutuhkan bantuan pencapaian
+                        Prestasi</p>
                 </div>
             </div>
-        </div>
+                    
+        </div>
         <div class="container">
-                                      <!-- info lomba-->               
-    
-                                    <!-- info beasiswa -->
+            <!-- info lomba 1-->
+            <h1 class="text-center my-4" style="color: white;">Lomba</h1>
+            <div class="grid-container">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modalLomba1">
+                    <img src="images/lomba1.1.jpg" alt="Pamflet Lomba">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐋𝐨𝐦𝐛𝐚 𝐃𝐞𝐬𝐚𝐢𝐧 𝐏𝐨𝐬𝐭𝐞𝐫,
+                            𝐈𝐧𝐟𝐨𝐠𝐫𝐚𝐟𝐢𝐬 & 𝐈𝐥𝐮𝐬𝐭𝐫𝐚𝐬𝐢 𝐍𝐚𝐬𝐢𝐨𝐧𝐚𝐥]
+                        </p>
+                        <P>
+                        <p>Timeline
+                            : 13 Maret - 16 April 2025
+                        </p>
+                        </P>
+                        <div class="text-end mt-3">
+                            <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalLomba1">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- info lomba 2-->
+            <div class="grid-container">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modalLomba2">
+                    <img src="images/lomba2.1.jpg" alt="Pamflet Lomba">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐈𝐎𝐅𝐄𝐒𝐓 𝐅𝐓𝐈 𝟐𝟎𝟐𝟓]
+                        </p>
+                        <P>
+                        <p>Timeline
+                            : 15 Maret - 1 Mei 2025
+                        </p>
+                        </P>
+                        <div class="text-end mt-3">
+                            <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalLomba2">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- info lomba 3-->
+            <div class="grid-container">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modalLomba3">
+                    <img src="images/lomba3.1.jpg" alt="Pamflet Lomba">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐁𝐌𝐂 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓]
+                        </p>
+                        <P>
+                        <p>Timeline
+                            : 16 Maret – 3 Mei 2025
+                        </p>
+                        </P>
+                        <div class="text-end mt-3">
+                            <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalLomba3">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- info beasiswa 1 -->
             <h1 class="text-center my-4" style="color: white;">Beasiswa</h1>
             <div class="grid-container">
                 <div class="card" data-bs-toggle="modal" data-bs-target="#modalBeasiswa">
-                    <img src="images/beasiswa1-1.jpg" alt="Pamflet Beasiswa">
+                    <img src="images/beasiswa1.1.jpg" alt="Pamflet Beasiswa">
                     <div class="card-body">
                         <h5 class="card-title"></h5>
-                        <p class="card-text">[𝐈𝐍𝐅𝐎 𝐁𝐄𝐀𝐒𝐈𝐒𝐖𝐀 : 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢 𝟐𝟎𝟐𝟓 𝐁𝐚𝐭𝐜𝐡 𝟖]
-                            </p>
-                            <p>Timeline
-                                : 10 februari - 7 Maret 2025 
-                                </p>
+                        <p class="card-text">[𝐈𝐍𝐅𝐎 𝐁𝐄𝐀𝐒𝐈𝐒𝐖𝐀 : 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢
+                            𝟐𝟎𝟐𝟓 𝐁𝐚𝐭𝐜𝐡 𝟖]
+                        </p>
+                        <p>Timeline
+                            : 10 februari - 7 Maret 2025
+                        </p>
                         <div class="text-end mt-3">
                             <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalBeasiswa">
                                 Baca Selengkapnya <i class="bi bi-arrow-right"></i>
@@ -613,103 +692,303 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal Lomba -->
-        <div class="modal fade" id="modalLomba1" tabindex="-1" aria-labelledby="modalLombaLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLombaLabel">Lomba Pemrograman Nasional</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="#" class="img-fluid" alt="Pamflet Lomba">
-                        <p class="mt-3">Kompetisi tingkat nasional yang menantang kemampuan coding mahasiswa. Ikuti dan
-                            menangkan hadiah menarik!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Beasiswa -->
-        <div class="modal fade" id="modalBeasiswa" tabindex="-1" aria-labelledby="modalBeasiswaLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalBeasiswaLabel">Beasiswa Kelas </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-start">
-                        <img src="images/beasiswa1-2.jpg" class="img-fluid" alt="Pamflet Beasiswa">
-                        <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐁𝐄𝐀𝐒𝐈𝐒𝐖𝐀 : 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢 𝟐𝟎𝟐𝟓 𝐁𝐚𝐭𝐜𝐡 𝟖]
-
-                            <p>Halo InforSys! 🤖👋</p>
-                            <p>Dalam menghadapi transformasi digital yang semakin cepat, penguasaan Artificial Intelligence (AI), Data Science, Visualisasi Data, SQL, dan Python menjadi keterampilan utama yang dibutuhkan industri. Dicoding, sebagai platform pembelajaran teknologi terkemuka di Indonesia, kembali menghadirkan Beasiswa Dicoding Bangun Negeri 2025 Batch 8 sebagai bentuk komitmen dalam mencetak talenta digital yang berkualitas.</p> 
-                            
-                            <p>Tunggu apalagi, yuk daftarkan dirimu sekarang dan ikuti 5 kelas pilihan terbaik yang dapat kamu ikuti🤩🫵 </p>
-                            
-                            <p>📅 Timeline 📅
-                            • 10 februari - 7 Maret 2025 </p>
-                            
-                            <p>‼SYARAT DAN KETENTUAN‼</p>
-                                <p>1. mahasiswa aktif, yang dibuktikan memiliki KTM/KRS</p>
-                                <p>2. memiliki device seperti laptop/komputer dan koneksi internet </p>
-                                <p>3. Diharapkan dapat menyelesaikan setiap kelas yang disediakan</p>
-                               <p> 4. hanya dapat mendaftar 1x program tersebut</p>
-                            
-                            <p>✨ BENEFIT✨
-                            Meningkatkan keterampilan dan wawasan dalam bidang teknologi serta pemrograman. </p>
-                            
-                            <p>Yuk daftarkan dirimu sekarang di: dincoding.id/dbn
-                            Jangan lewatkan kesempatan untuk jadi #FutureCodersID berikutnya! 🚀</p>
-                            
-                            <p>Jika kamu mahasiswa Sistem Informasi Unsika yang sudah mendaftar dan ingin mendaftar kegiatan ini, diharapkan untuk menghubungi:</p>
-                            <p>wa.me/6289643334333 (Faraj)</p>
-                            <p>wa.me/6283807762351 (Raynaldi)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="bg-light py-4 mt-5">
-            <div class="container">
-                <div class="text-center">
-                    <!-- Logo -->
-                    <div class="mb-4">
-                        <img src="images/main-logo.png" alt="HIMSIKA Logo" class="footer-logo">
-                    </div>
-
-                    <!-- Bagian Alamat -->
-                    <div class="mb-3">
-                        <h5 class="fw-bold mb-3">HIMSIKA</h5>
-                        <p class="mb-1">Jl. HS. Ronggowaluyo</p>
-                        <p class="mb-1">Telukjambe Timur</p>
-                        <p class="mb-3">Karawang - 41361</p>
-                        <a href="mailto:himsika@cs.unsika.ac.id" class="text-decoration-none text-blue">
-                            himsika@cs.unsika.ac.id
+        <!-- info beasiswa 2 -->
+        <div class="grid-container">
+            <div class="card" data-bs-toggle="modal" data-bs-target="#modalBeasiswa2">
+                <img src="images/beasiswa2.1.jpg" alt="Pamflet Beasiswa">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">[𝐈𝐍𝐅𝐎 𝐂𝐎𝐔𝐑𝐒𝐄: 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢 𝐁𝐚𝐭𝐜𝐡 𝟗]
+                    </p>
+                    <p>Timeline
+                        : 22 Maret - 30 April 2025
+                    </p>
+                    <div class="text-end mt-3">
+                        <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalBeasiswa2">
+                            Baca Selengkapnya <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
-
-                    <!-- Hak Cipta -->
-                    <div class="mt-4">
-                        <p class="text-secondary small mb-1 text-white">
-                            © 2025 AASHIMSIKA
-                            <span class="mx-2">|</span>
-                            <span class="mx-2">|</span>
-                            All rights reserved.
-                        </p>
-                        <p class="text-muted small mt-2">
-                            ...
-                        </p>
-                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+    <!-- Modal Lomba 1 -->
+    <div class="modal fade" id="modalLomba1" tabindex="-1" aria-labelledby="modalLombaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLombaLabel">LOMBA POSTER</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="images/lomba1.jpg" class="img-fluid" alt="Pamflet Lomba">
+                    <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐋𝐨𝐦𝐛𝐚 𝐃𝐞𝐬𝐚𝐢𝐧 𝐏𝐨𝐬𝐭𝐞𝐫, 𝐈𝐧𝐟𝐨𝐠𝐫𝐚𝐟𝐢𝐬 &
+                        𝐈𝐥𝐮𝐬𝐭𝐫𝐚𝐬𝐢 𝐍𝐚𝐬𝐢𝐨𝐧𝐚𝐥]
+
+                    <p>Halo InforSys! 🤖👋🏻</p>
+
+                    <p>Saatnya unjuk kreativitas dan wawasanmu lewat desain poster, infografis, & ilustrasi dengan tema
+                        utama: “Literasi Media dan Informasi”</p>
+                    <h6>✨ <b>BENEFIT</b>✨</h6>
+                    <p>Juara 1: Uang Pembinaan + Trofi + Sertifikat</p>
+                    <p>Juara 2: Uang Pembinaan + Trofi + Sertifikat</p>
+                    <p>Juara 3: Uang Pembinaan + Trofi + Sertifikat</p>
+                    <p>Seluruh peserta mendapatkan e-sertifikat</p>
+                    <h6>📝 <b>SYARAT & KETENTUAN</b>📝</h6>
+                    <p>1.Mahasiswa aktif D3/D4/S1 seluruh Indonesia</p>
+                    <p>2.Karya orisinil, bukan plagiat, dan belum pernah dipublikasikan</p>
+                    <p>3.Lomba bersifat individu</p>
+                    <p>4.Ukuran desain A3 (format JPEG, PNG, atau PDF)</p>
+                    <p>5.Wajib follow Instagram <a href="https://www.instagram.com/exhibitionglam_ipk/?hl=en"
+                            target="_blank">@exhibitionglam_ipk</a> dan <a
+                            href="https://www.instagram.com/ipk.unp/?hl=en" target="_blank">@ipk.unp</a></p>
+                    <p>6.Desain bebas menggunakan elemen apapun</p>
+                    <p>Karya pemenang akan digunakan untuk kepentingan edukasi dan dipamerkan dalam Eksbisi Glam
+                        Universitas Negeri Padang </p>
+                    <h6>💵 <b>BIAYA PENDAFTARAN</b> 💵</h6>
+                    <p>Rp. 20.000</p>
+                    <p>Pembayaran melalui:</p>
+                    <p>Bank BRI: 55340102349533 a.n Abdul Aziz</p>
+                    <h6>📅 <b>TIMELINE LOMBA</b>📅</h6>
+                    <p>13 Maret – 16 April 2025: Registrasi & Pengumpulan Karya</p>
+                    <p>17 – 23 April 2025: Penjurian dan Seleksi</p>
+                    <p>25 April 2025: Pengumuman Pemenang</p>
+                    <p>🔗<b>LINK PENDAFTARAN: <a href="https://linktr.ee/HIMAPIKA">
+                                <h6>https://linktr.ee/HIMAPIKA</h6>
+                            </a></b></p>
+                    <p>Untuk info atau pertanyaan lebih lanjut bisa menghubungi:</p>
+                    <p>📞 CP: Faraj <a href="https://wa.me/6289643334333" target="_blank">https://wa.me/6289643334333
+                        </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Lomba 2 -->
+    <div class="modal fade" id="modalLomba2" tabindex="-1" aria-labelledby="modalLombaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLombaLabel">LOMBA POSTER</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="images/lomba2.jpg" class="img-fluid" alt="Pamflet Lomba">
+                    <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐈𝐎𝐅𝐄𝐒𝐓 𝐅𝐓𝐈 𝟐𝟎𝟐𝟓]
+
+                    <p>Halo InforSys! 🤖👋🏻</p>
+
+                    <p>Ada kesempatan seru nih untuk mengasah kemampuan dan menunjukkan kreativitas kalian dalam IOFEST
+                        FTI 2025 dengan tema utama: <i>“Mechaven: Ignite Ideas, Transform the World”</i></p>
+                    <h6>🌟<b>Kategori Lomba :</b></h6>
+                    <p>1. Web Development</p>
+                    <p>2. UI/UX Design</p>
+                    <p>3. Business Plan</p>
+                    <p>4. Android Programming</p>
+                    <h6><b>💰 Benefit bagi Pemenang:</b></h6>
+                    <p>Juara 1: Uang Pembinaan Rp. 3.500.000 + e-sertifikat</p>
+                    <p>Juara 2: Uang Pembinaan Rp. 2.500.000 + e-sertifikat</p>
+                    <p>Juara 3: Uang Pembinaan Rp. 1.500.000 + e-sertifikat</p>
+                    <h6><b>📝 Syarat dan Ketentuan</b></h6>
+                    <p>1. Upload KTM (untuk mahasiswa) atau KTP (untuk umum) seluruh anggota tim</p>
+                    <p>2. Upload bukti screenshot follow Instagram <a
+                            href="https://www.instagram.com/iofest_untar/?hl=en" target="_blank">@iofest_untar</a> oleh
+                        seluruh anggota tim</p>
+                    <p>3. Upload bukti post ribbon seluruh anggota tim melalui link berikut: (<a
+                            href="https://s.id/Link_Twibbon" target="_blank">https://s.id/Link_Twibbon</a>)</p>
+                    <p>4. Upload lembar pernyataan orisinalitas karya dalam format (.pdf) (<a
+                            href="https://s.id/Template_Pernyataan_Orisinalitas"
+                            target="_blank">https://s.id/Template_Pernyataan_Orisinalitas</a>)</p>
+                    <p>5. Upload bukti pembayaran registrasi sebesar Rp. 55.000 ke nomor rekening: 5490952235 (BCA) a/n
+                        Raymond Euginio Kent Sanjaya - isi berita dengan NamaTim-MhsUmum</p>
+                    <h6><b>📌 Timeline Lomba:</b></h6>
+                    <p>15 Maret - 1 Mei 2025 : Registrasi & Pengumpulan Karya</p>
+                    <p><b>📝 Link Pendaftaran: <a href="https://s.id/PendaftaranIOFEST">
+                                <h6>https://s.id/PendaftaranIOFEST</h6>
+                            </a></b></p>
+                    <p><b>📄 Link Invitation Letter:<a href="https://bit.ly/InvitationLetterUniv">
+                                <h6>https://bit.ly/InvitationLetterUniv</h6>
+                            </a></b></p>
+                    <p>Jika ada pertanyaan atau butuh informasi lebih lanjut, bisa langsung menghubungi : </p>
+                    <p>📞 CP: Faraj <a href="https://wa.me/6289643334333" target="_blank">https://wa.me/6289643334333
+                        </a></p>
+                    <p>Ayo, daftarkan tim kalian sekarang dan buktikan ide-ide kreatif kalian untuk mengubah dunia! 💡✨
+                        Jangan sampai ketinggalan kesempatan emas ini! 🎯</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Lomba 3 -->
+    <div class="modal fade" id="modalLomba3" tabindex="-1" aria-labelledby="modalLombaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLombaLabel">LOMBA POSTER</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="images/lomba2.jpg" class="img-fluid" alt="Pamflet Lomba">
+                    <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐋𝐎𝐌𝐁𝐀: 𝐁𝐌𝐂 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓]
+                    <p>Halo InforSys! 🤖👋🏻</p>
+                    <p>Yuk, ikuti kompetisi bisnis nasional yang dirancang untuk menggali potensi dan kreativitas mahasiswa dalam membangun model bisnis masa depan!</p>
+                    <p>📌<b>TEMA UTAMA</b> : <i>“Unlimited Future: Embracing Growth, Expanding Possibilities”</i> Ciptakan ide bisnis inovatif berbasis Business Model Canvas dan raih peluang menuju dunia startup!</p>
+                    <h6><b>✨ BENEFIT ✨</b></h6>
+                    <p>1. E-certificate untuk seluruh peserta</p>
+                    <p>2. E-money untuk Juara 1 & Juara Favorit</p>
+                    <p>3. Pengalaman presentasi ide bisnis ke dewan juri yang inspiratif</p>
+                    <p>4. Exposure nasional dari media sosial HMBD ITK</p>
+                    <p>5. Networking antar-mahasiswa seluruh Indonesia</p>
+                    <b>📝 SYARAT & KETENTUAN 📝</b>
+                    <p>Juara 1: Uang Pembinaan Rp. 3.500.000 + e-sertifikat</p>
+                    <p>Juara 2: Uang Pembinaan Rp. 2.500.000 + e-sertifikat</p>
+                    <p>Juara 3: Uang Pembinaan Rp. 1.500.000 + e-sertifikat</p>
+                    <h6><b>📝 Syarat dan Ketentuan</b></h6>
+                    <p>1. Upload KTM (untuk mahasiswa) atau KTP (untuk umum) seluruh anggota tim</p>
+                    <p>2. Upload bukti screenshot follow Instagram <a
+                            href="https://www.instagram.com/iofest_untar/?hl=en" target="_blank">@iofest_untar</a> oleh
+                        seluruh anggota tim</p>
+                    <p>3. Upload bukti post ribbon seluruh anggota tim melalui link berikut: (<a
+                            href="https://s.id/Link_Twibbon" target="_blank">https://s.id/Link_Twibbon</a>)</p>
+                    <p>4. Upload lembar pernyataan orisinalitas karya dalam format (.pdf) (<a
+                            href="https://s.id/Template_Pernyataan_Orisinalitas"
+                            target="_blank">https://s.id/Template_Pernyataan_Orisinalitas</a>)</p>
+                    <p>5. Upload bukti pembayaran registrasi sebesar Rp. 55.000 ke nomor rekening: 5490952235 (BCA) a/n
+                        Raymond Euginio Kent Sanjaya - isi berita dengan NamaTim-MhsUmum</p>
+                    <h6><b>📌 Timeline Lomba:</b></h6>
+                    <p>15 Maret - 1 Mei 2025 : Registrasi & Pengumpulan Karya</p>
+                    <p><b>📝 Link Pendaftaran: <a href="https://s.id/PendaftaranIOFEST">
+                                <h6>https://s.id/PendaftaranIOFEST</h6>
+                            </a></b></p>
+                    <p><b>📄 Link Invitation Letter:<a href="https://bit.ly/InvitationLetterUniv">
+                                <h6>https://bit.ly/InvitationLetterUniv</h6>
+                            </a></b></p>
+                    <p>Jika ada pertanyaan atau butuh informasi lebih lanjut, bisa langsung menghubungi : </p>
+                    <p>📞 CP: Faraj <a href="https://wa.me/6289643334333" target="_blank">https://wa.me/6289643334333
+                        </a></p>
+                    <p>Ayo, daftarkan tim kalian sekarang dan buktikan ide-ide kreatif kalian untuk mengubah dunia! 💡✨
+                        Jangan sampai ketinggalan kesempatan emas ini! 🎯</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Beasiswa 1 -->
+    <div class="modal fade" id="modalBeasiswa" tabindex="-1" aria-labelledby="modalBeasiswaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBeasiswaLabel">Beasiswa Kelas </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="images/beasiswa1.jpg" class="img-fluid" alt="Pamflet Beasiswa">
+                    <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐁𝐄𝐀𝐒𝐈𝐒𝐖𝐀 : 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢 𝟐𝟎𝟐𝟓
+                        𝐁𝐚𝐭𝐜𝐡 𝟖]
+
+                    <p>Halo InforSys! 🤖👋</p>
+                    <p>Dalam menghadapi transformasi digital yang semakin cepat, penguasaan Artificial Intelligence
+                        (AI), Data Science, Visualisasi Data, SQL, dan Python menjadi keterampilan utama yang dibutuhkan
+                        industri. Dicoding, sebagai platform pembelajaran teknologi terkemuka di Indonesia, kembali
+                        menghadirkan Beasiswa Dicoding Bangun Negeri 2025 Batch 8 sebagai bentuk komitmen dalam mencetak
+                        talenta digital yang berkualitas.</p>
+
+                    <p>Tunggu apalagi, yuk daftarkan dirimu sekarang dan ikuti 5 kelas pilihan terbaik yang dapat kamu
+                        ikuti🤩🫵 </p>
+
+                    <p>📅 Timeline 📅
+                        • 10 februari - 7 Maret 2025 </p>
+
+                    <p>‼SYARAT DAN KETENTUAN‼</p>
+                    <p>1. mahasiswa aktif, yang dibuktikan memiliki KTM/KRS</p>
+                    <p>2. memiliki device seperti laptop/komputer dan koneksi internet </p>
+                    <p>3. Diharapkan dapat menyelesaikan setiap kelas yang disediakan</p>
+                    <p> 4. hanya dapat mendaftar 1x program tersebut</p>
+
+                    <p>✨ BENEFIT✨
+                        Meningkatkan keterampilan dan wawasan dalam bidang teknologi serta pemrograman. </p>
+
+                    <p>Yuk daftarkan dirimu sekarang di: dincoding.id/dbn
+                        Jangan lewatkan kesempatan untuk jadi #FutureCodersID berikutnya! 🚀</p>
+
+                    <p>Jika kamu mahasiswa Sistem Informasi Unsika yang sudah mendaftar dan ingin mendaftar kegiatan
+                        ini, diharapkan untuk menghubungi:</p>
+                    <p>wa.me/6289643334333 (Faraj)</p>
+                    <p>wa.me/6283807762351 (Raynaldi)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Beasiswa 2-->
+    <div class="modal fade" id="modalBeasiswa2" tabindex="-1" aria-labelledby="modalBeasiswaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBeasiswaLabel">Beasiswa Kelas </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="images/beasiswa2.jpg" class="img-fluid" alt="Pamflet Beasiswa">
+                    <p class="mt-3">[𝐈𝐍𝐅𝐎 𝐂𝐎𝐔𝐑𝐒𝐄: 𝐃𝐢𝐜𝐨𝐝𝐢𝐧𝐠 𝐁𝐚𝐧𝐠𝐮𝐧 𝐍𝐞𝐠𝐞𝐫𝐢 𝐁𝐚𝐭𝐜𝐡 𝟗]
+
+                    <p>Halo InforSys! 🤖👋</p>
+                    <p>Lagi cari kelas gratis dengan materi yang dimulai dari dasar pemrograman? Ayo daftar program beasiswa Dicoding Bangun Negeri! Pendaftar dapat memilih mater sesuai dengan minat masing masing, ada kelas yang akan fokus ke pemrograman dengan Kotlin, Phyton, Swift, dan Dart. Kelas yang membahas tentang Data Science, AI, SQL, dan Cloud. Serta kelas dengan fokus materi Back-End, DevOps, GitHub dan masih banyak materi menarik lainnya!🤩🤩</p>
+                    <p><b>✨BENEFIT✨:</b></p>
+                    <p>1. Kurikulum terupdate dan relevan dengan kebutuhan industri</p>
+                    <p>2. Forum diskusi di setiap kelas</p>
+                    <p>3. Sertifikat kompetisi untuk peserta yang berhasil lulus dari kelas Dicoding </p>
+                    <p><b>📝SYARAT DAN KETENTUAN 📝:</b></p>
+                    <p>1. Mahasiswa/i aktif di perguruan tinggi yang dibuktikan dengan email yang memiliki domain universitas</p>
+                    <p>2. Memiliki device berupa komputer atau laptop serta koneksi internet</p>
+                    <p>3. Peserta diharapkan dapat menyelesaikan kelas yang dipilih selama durasi yang sudah ditentukan</p>
+                    <p>4. Peserta yang tidak menyelesaikan kelas, tidak diperbolehkan untuk meminta kelas baru pada batch berikutnya</p>
+                    <p><b>📆TIMELINE PENDAFTARAN📆</b></p>
+                    <p>22 Maret - 30 April 2025</p>
+                    <p>Tunggu apalagi? Ayo daftar sekarang!🥳🥳 Link Pendaftaran: <a href="dicoding.id/DBN" target="_blank">dicoding.id/DBN</a></p>
+                    <p>Jika ada pertanyaan atau butuh informasi lebih lanjut, bisa langsung menghubungi : </p>
+                    <p>📞 CP: Faraj <a href="https://wa.me/6289643334333" target="_blank">https://wa.me/6289643334333
+                        </a></p>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="text-center">
+                <!-- Logo -->
+                <div class="mb-4">
+                    <img src="images/main-logo.png" alt="HIMSIKA Logo" class="footer-logo">
+                </div>
+
+                <!-- Bagian Alamat -->
+                <div class="mb-3">
+                    <h5 class="fw-bold mb-3">HIMSIKA</h5>
+                    <p class="mb-1">Jl. HS. Ronggowaluyo</p>
+                    <p class="mb-1">Telukjambe Timur</p>
+                    <p class="mb-3">Karawang - 41361</p>
+                    <a href="mailto:himsika@cs.unsika.ac.id" class="text-decoration-none text-blue">
+                        himsika@cs.unsika.ac.id
+                    </a>
+                </div>
+
+                <!-- Hak Cipta -->
+                <div class="mt-4">
+                    <p class="text-secondary small mb-1 text-white">
+                        © 2025 AASHIMSIKA
+                        <span class="mx-2">|</span>
+                        <span class="mx-2">|</span>
+                        All rights reserved.
+                    </p>
+                    <p class="text-muted small mt-2">
+                        ...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script>
     // Navbar Scroll Effect
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
-        if(window.scrollY > 50) {
+        if (window.scrollY > 50) {
             navbar.classList.add('navbar-scrolled');
         } else {
             navbar.classList.remove('navbar-scrolled');
@@ -720,19 +999,19 @@
     document.querySelectorAll('.nav-link').forEach(navLink => {
         navLink.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
-            if(navbarCollapse.classList.contains('show')) {
+            if (navbarCollapse.classList.contains('show')) {
                 new bootstrap.Collapse(navbarCollapse).toggle();
             }
         });
     });
 
     // Dropdown Hover Effect for Desktop
-    if(window.innerWidth > 991) {
+    if (window.innerWidth > 991) {
         document.querySelectorAll('.nav-item.dropdown').forEach(item => {
             item.addEventListener('mouseover', () => {
                 item.querySelector('.dropdown-toggle').click();
             });
-            
+
             item.addEventListener('mouseleave', () => {
                 const dropdown = bootstrap.Dropdown.getInstance(item.querySelector('.dropdown-toggle'));
                 dropdown.hide();
